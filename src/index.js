@@ -1,4 +1,4 @@
-import { setup, renderSkuPicker } from 'shared-sku-app';
+import { setup, renderSkuPicker } from './services/shared-sku-app/src/index';
 import { fetchProductPreviews, makeProductSearchResolver } from './productResolvers';
 
 import logo from './logo.svg';
@@ -9,7 +9,7 @@ function makeCTA(fieldType) {
   return fieldType === 'Array' ? 'Select products' : 'Select a product';
 }
 
-export function validateParameters(parameters) {
+export function validateParametersStores(parameters) {
   if (parameters.storefrontAccessToken.length < 1) {
     return 'Provide the storefront access token to your Shopify store.';
   }
