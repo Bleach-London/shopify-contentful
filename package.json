@@ -18,7 +18,9 @@
     "@types/react-sortable-hoc": "0.7.1",
     "@types/webpack-env": "1.15.1",
     "contentful-cli": "^1.2.12",
+    "css-loader": "^3.6.0",
     "cssnano": "4.1.10",
+    "ts-loader": "^7.0.5",
     "typescript": "^3.7.5"
   },
   "dependencies": {
@@ -27,14 +29,13 @@
     "webpack-cli": "3.3.9",
     "style-loader": "1.0.0",
     "babel-loader": "8.0.5",
-    "core-js": "3.4.1",
+    "core-js": "3.6.4",
     "shopify-buy": "^2.8.1",
     "@contentful/forma-36-fcss": "^0.0.34",
     "@contentful/forma-36-react-components": "^3.30.2",
     "@contentful/forma-36-tokens": "^0.5.1",
     "array-move": "2.2.1",
     "contentful-ui-extensions-sdk": "^3.10.7",
-    "core-js": "3.6.4",
     "emotion": "^10.0.27",
     "es6-promise": "^4.2.8",
     "lodash.get": "^4.4.2",
@@ -44,9 +45,7 @@
     "react-sortable-hoc": "1.11.0"
   },
   "scripts": {
-    "start": "contentful-extension-scripts start --serve-only",
-    "build": "contentful-extension-scripts build --no-inline",
-    "deploy": "aws s3 sync ./build ${STATIC_S3_BASE}/shopify --acl public-read"
+    "start": "webpack && node server.js"
   },
   "browserslist": [
     "last 5 Chrome version",
