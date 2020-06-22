@@ -7,7 +7,7 @@ function makeCTA(fieldType) {
   return fieldType === 'Array' ? 'Select products' : 'Select a product';
 }
 
-export function validateParametersStores(parameters) {
+export function validateParameters(parameters) {
   if (parameters.storefrontAccessToken.length < 1) {
     return 'Provide the storefront access token to your Shopify store.';
   }
