@@ -16,6 +16,12 @@
   ],
   "plugins": [
     [
+      "module-resolver",
+      {
+        "root": ["./"]
+      }
+    ],
+    [
       "@babel/plugin-proposal-class-properties",
       {
         "loose": true

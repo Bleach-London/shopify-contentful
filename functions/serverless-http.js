@@ -19,10 +19,8 @@
 /* Express App */
 import express from 'express';
 import cors from 'cors';
-import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import compression from 'compression';
-import customLogger from '../utils/logger';
 
 /* My express App */
 export default function expressApp(functionName) {
@@ -77,25 +75,9 @@ export default function expressApp(functionName) {
     res.send(html);
   });
 
-  router.get('/users', (req, res) => {
-    res.json({
-      users: [
-        {
-          name: 'steve'
-        },
-        {
-          name: 'joe'
-        }
-      ]
-    });
-  });
-
   router.get('/hello/', function(req, res) {
     res.send('hello world');
   });
-
-  // Attach logger
-  app.use(morgan(customLogger));
 
   // Setup routes
   app.use(routerBasePath, router);

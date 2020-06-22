@@ -6,6 +6,9 @@
     "@babel/core": "7.7.2",
     "@babel/plugin-proposal-class-properties": "7.7.0",
     "@babel/plugin-transform-runtime": "7.6.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-env": "^1.7.0",
     "@babel/preset-env": "7.7.1",
     "@babel/preset-react": "7.7.0",
     "@contentful/contentful-extension-scripts": "^0.15.1",
@@ -21,7 +24,8 @@
     "css-loader": "^3.6.0",
     "cssnano": "4.1.10",
     "ts-loader": "^7.0.5",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "netlify-lambda": "^0.4.0"
   },
   "dependencies": {
     "@contentful/forma-36-fcss": "^0.0.34",
@@ -30,6 +34,8 @@
     "array-move": "2.2.1",
     "babel-loader": "8.0.5",
     "body-parser": "^1.19.0",
+    "compression": "^1.7.2",
+    "cors": "^2.8.4",
     "contentful-ui-extensions-sdk": "^3.10.7",
     "core-js": "3.6.4",
     "dotenv": "^8.2.0",
@@ -38,6 +44,7 @@
     "express": "4.17.1",
     "serverless-http": "^2.3.0",
     "lodash.get": "^4.4.2",
+    "morgan": "^1.9.0",
     "nodemon": "^1.19.2",
     "prop-types": "15.7.2",
     "react": "16.12.0",
@@ -49,7 +56,16 @@
     "webpack-cli": "3.3.9"
   },
   "scripts": {
-    "start": "webpack && nodemon server-local.js"
+    "start": "netlify-lambda serve functions",
+    "build:functions": "netlify-lambda build functions"
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
   },
   "browserslist": [
     "last 5 Chrome version",

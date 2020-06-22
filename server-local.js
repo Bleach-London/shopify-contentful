@@ -17,6 +17,12 @@
 
 'use strict';
 
-const app = require('./express/server');
+import serverless from 'serverless-http';
 
-app.listen(3000, () => console.log('Local app listening on port 3000!'));
+const expressApp = require('./express/server');
+
+const functionName = 'serverless-http';
+
+const app = expressApp(functionName);
+
+exports.handler = serverless(app);
