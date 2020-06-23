@@ -12,12 +12,7 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-sortable-hoc": "0.7.1",
     "@types/webpack-env": "1.15.1",
-    "contentful-cli": "^1.2.12",
-    "css-loader": "^3.6.0",
-    "cssnano": "4.1.10",
-    "ts-loader": "^7.0.5",
-    "typescript": "^3.7.5",
-    "netlify-lambda": "^0.4.0"
+    "contentful-cli": "^1.2.12"
   },
   "dependencies": {
     "@babel/core": "7.7.2",
@@ -31,6 +26,11 @@
     "@contentful/forma-36-fcss": "^0.0.34",
     "@contentful/forma-36-react-components": "^3.30.2",
     "@contentful/forma-36-tokens": "^0.5.1",
+    "css-loader": "^3.6.0",
+    "cssnano": "4.1.10",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.7.5",
+    "netlify-lambda": "^0.4.0",
     "array-move": "2.2.1",
     "babel-loader": "8.0.5",
     "body-parser": "^1.19.0",
