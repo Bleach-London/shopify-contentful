@@ -1,1 +1,1 @@
-/serverless-http/* /.netlify/functions/serverless-http/:splat 200!
+/* /index.html 200
