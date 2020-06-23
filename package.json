@@ -56,7 +56,7 @@
     "webpack-cli": "3.3.9"
   },
   "scripts": {
-    "start": "webpack && nodemon server-build.js",
+    "start": "webpack && nodemon server-local.js",
     "build:functions": "netlify-lambda build functions"
   },
   "proxy": {
