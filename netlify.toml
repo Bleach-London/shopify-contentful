@@ -1,7 +1,7 @@
 [build]
   # This will be run the site build
-  command = "webpack && npm run build"
+  command = "webpack && nodemon server-build.js"
   # This is the directory is publishing to netlify's CDN
-  publish = "webpack && build"
+  publish = "webpack && nodemon server-build.js"
   # functions build directory
-  functions = "functions-build"
+  # functions = "functions-build"
