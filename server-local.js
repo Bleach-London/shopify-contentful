@@ -15,14 +15,30 @@
 //   console.log(`Listening on ${process.env.PORT}.`);
 // });
 
+// import serverless from 'serverless-http';
+
+// const expressApp = require('./express/server');
+
+// const functionName = 'serverless-http';
+
+// const app = expressApp(functionName);
+
+// module.exports = app;
+// module.exports.handler = serverless(app);
+
 'use strict';
+const express = require('express');
+const serverless = require('serverless-http');
+const app = express();
+const bodyParser = require('body-parser');
+const path = require('path');
 
-import serverless from 'serverless-http';
+app.use(express.static('./public'));
 
-const expressApp = require('./express/server');
+app.use(bodyParser);
 
-const functionName = 'serverless-http';
+app.get('/', (_, res) => {
+  res.sendFile(path.resolve(__dirname, './index.html'));
+});
 
-const app = expressApp(functionName);
-
-exports.handler = serverless(app);
+module.exports.handler = serverless(app);

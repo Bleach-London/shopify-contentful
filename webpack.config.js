@@ -6,7 +6,8 @@ module.exports = {
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, './public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    libraryTarget: 'commonjs2'
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js']

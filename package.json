@@ -56,14 +56,14 @@
     "webpack-cli": "3.3.9"
   },
   "scripts": {
-    "start": "netlify-lambda serve functions",
+    "start": "webpack && nodemon server-build.js",
     "build:functions": "netlify-lambda build functions"
   },
   "proxy": {
-    "/.netlify/functions": {
+    "/functions": {
       "target": "http://localhost:9000",
       "pathRewrite": {
-        "^/\\.netlify/functions": ""
+        "^/\\functions": ""
       }
     }
   },
