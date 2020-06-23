@@ -24,7 +24,7 @@ app.use(express.static('./public'));
 /// ROUTES ///
 //////////////
 app.get('/', (_, res) => {
-  res.sendFile(path.resolve(__dirname, './index.html'));
+  res.sendFile(path.resolve(__dirname, './public/index.html'));
 });
 
 //////////////
