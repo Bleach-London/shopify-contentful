@@ -57,8 +57,9 @@
   },
   "scripts": {
     "start": "webpack && nodemon server-local.js",
-    "build:functions": "netlify-lambda build functions"
+    "build": "webpack"
   },
+  "heroku-run-build-script": true,
   "proxy": {
     "/functions": {
       "target": "http://localhost:9000",
