@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "@testing-library/react": "9.4.0",
     "contentful-cli": "^1.2.12"
   },
   "dependencies": {
@@ -34,6 +33,7 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-sortable-hoc": "0.7.1",
     "@types/webpack-env": "1.15.1",
+    "@testing-library/react": "9.4.0",
     "array-move": "2.2.1",
     "contentful-ui-extensions-sdk": "^3.10.7",
     "css-loader": "^3.6.0",
