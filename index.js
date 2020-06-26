@@ -1,6 +1,9 @@
 import { setup, renderSkuPicker } from './services/shared-sku-app/src/index.tsx';
 import { fetchProductPreviews, makeProductSearchResolver } from './productResolvers';
 
+import '@contentful/forma-36-react-components/dist/styles.css';
+import '@contentful/forma-36-fcss/dist/styles.css';
+
 const DIALOG_ID = 'dialog-root';
 
 function makeCTA(fieldType) {
