@@ -108,7 +108,7 @@ export default class Field extends React.Component<Props, State> {
           </div>
         )}
         <div className={styles.container}>
-          <img src={this.props.logo} alt="Logo" className={styles.logo} />
+          <div className={styles.logo}>{this.props.logo}</div>
           <Button
             icon="ShoppingCart"
             buttonType="muted"
