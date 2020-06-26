@@ -1,6 +1,8 @@
 import { setup, renderSkuPicker } from './services/shared-sku-app/src/index.tsx';
 import { fetchProductPreviews, makeProductSearchResolver } from './productResolvers';
 
+import logo from './logo.svg';
+
 import '@contentful/forma-36-react-components/dist/styles.css';
 import '@contentful/forma-36-fcss/dist/styles.css';
 
@@ -60,6 +62,7 @@ function isDisabled(/* currentValue, config */) {
 setup({
   makeCTA,
   name: 'Shopify',
+  logo,
   description:
     'The Shopify app allows editors to select products from their Shopify account and reference them inside of Contentful entries.',
   color: '#212F3F',
